@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { HashRouter, NavLink } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 import Header from './components/app-header'
 import Footer from './components/app-footer'
