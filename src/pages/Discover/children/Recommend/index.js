@@ -7,7 +7,10 @@ import { getBannersAction } from './store/action'
 function Recommend() {
   const dispatch = useDispatch()
   const { banners } = useSelector(state => ({
-    banners: state.recommend.banners
+    // banners: state.recommend.banners
+    // banners: state.get("recommend").get("banners")
+    // 语法糖：使用immutable中的 getIn()先拿外层的，再拿内层的
+    banners: state.getIn(["recommend", "banners"])
   }), shallowEqual)
 
   useEffect(() => {
