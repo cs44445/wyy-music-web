@@ -44,3 +44,13 @@ export const footerImages = [
     link: "https://music.163.com/uservideo#/plan"
   }
 ]
+
+export const discoverList = [
+  { title: "推荐", link: 'recommend' },
+  { title: "排行榜", link: 'ranking' },
+  { title: "歌单", link: 'playlist' },
+  { title: "主播电台", link: 'djradio' },
+  { title: "歌手", link: 'artist' },
+  { title: "新碟上架", link: 'album' },
+]
+
