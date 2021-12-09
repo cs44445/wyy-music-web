@@ -1,6 +1,7 @@
 import React, { memo } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 
+
 import { DiscoverWrapper, TopMenu } from './style'
 import { discoverList } from '@/utils/data'
 

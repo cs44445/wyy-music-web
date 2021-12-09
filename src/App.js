@@ -1,5 +1,7 @@
 import React, { memo } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from './store/store'
 
 import Header from './components/app-header'
 import Footer from './components/app-footer'
@@ -15,7 +17,7 @@ import Album from '@/pages/Discover/children/Album'
 
 export default memo(function App() {
   return (
-    <div>
+    <Provider store={store}>
       <BrowserRouter>
         <Header />
         <RoutesCom />
@@ -33,7 +35,7 @@ export default memo(function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </div>
+    </Provider>
   )
 })
 

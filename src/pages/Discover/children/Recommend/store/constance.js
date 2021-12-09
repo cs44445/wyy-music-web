@@ -1,0 +1,1 @@
+export const CHANGEBANNERS = 'CHANGE_BANNERS'
