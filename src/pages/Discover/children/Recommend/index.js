@@ -1,26 +1,12 @@
 // 用redux中的hooks替代
-import React, { memo, useEffect } from 'react'
-import { useDispatch, useSelector, shallowEqual } from 'react-redux'
+import React, { memo } from 'react'
 
-import { getBannersAction } from './store/action'
+import Banners from './children/Banners'
 
 function Recommend() {
-  const dispatch = useDispatch()
-  const { banners } = useSelector(state => ({
-    // banners: state.recommend.banners
-    // banners: state.get("recommend").get("banners")
-    // 语法糖：使用immutable中的 getIn()先拿外层的，再拿内层的
-    banners: state.getIn(["recommend", "banners"])
-  }), shallowEqual)
-
-  useEffect(() => {
-    dispatch(getBannersAction())
-  }, [dispatch])
-
   return (
     <div>
-      <h2>Recommend</h2>
-      {banners.length}
+      <Banners />
     </div>
   )
 }
