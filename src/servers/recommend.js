@@ -23,3 +23,12 @@ export function getNewAlbum(limit) {
     }
   })
 }
+
+export function getRecommendRanking(idx) {
+  return request({
+    url: "/top/list",
+    params: {
+      idx
+    }
+  })
+}

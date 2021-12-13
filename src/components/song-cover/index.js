@@ -9,7 +9,7 @@ export default function SongCover(props) {
   return (
     <SongsCoverWrapper>
       <div className="cover-top">
-        <img src={info.picUrl + '?param=140y140'} />
+        <img src={info.picUrl + '?param=140y140'} alt="" />
         <div className="cover sprite_covor">
           <div className="info sprite_covor">
             <span>

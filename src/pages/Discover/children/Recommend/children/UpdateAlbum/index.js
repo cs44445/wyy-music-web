@@ -27,14 +27,14 @@ export default memo(function Album() {
       <div className="content">
         <button className="arrow arrow-left sprite_02" onClick={e => pageRef.current.prev()}></button>
         <div className="album">
-          <Carousel ref={pageRef}>
+          <Carousel ref={pageRef} dots={false}>
             {
               [0, 1].map((item, index) => {
                 return (
                   <div key={item} className="page">
                     {
                       newAlbum.slice(item * 5, (item + 1) * 5).map(iten => {
-                        return <AlbumCover info={iten} size={100} width={118} bgp="-570px" />
+                        return <AlbumCover info={iten} size={100} width={118} bgp="-570px" key={iten.name} />
                       })
                     }
                   </div>

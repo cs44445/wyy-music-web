@@ -11,8 +11,8 @@ export default memo(function AlbumCover(props) {
         <a href="/#" className="cover image_cover">{info.name}</a>
       </div>
       <div className="album-info">
-        <a className="name text-nowrap">{info.name}</a>
-        <a className="artist text-nowrap">{info.artist.name}</a>
+        <a href="/" className="name text-nowrap">{info.name}</a>
+        <a href="/" className="artist text-nowrap">{info.artist.name}</a>
       </div>
     </AlbumWrapper>
   )

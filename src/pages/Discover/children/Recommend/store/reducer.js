@@ -1,11 +1,13 @@
 import * as actionTypes from "./constance";
 import { Map } from 'immutable'
-import { act } from "react-dom/test-utils";
 
 const initState = Map({
   banners: [],
   hotRecommend: [],
-  newAlbum: []
+  newAlbum: [],
+  recommendUpRanking: {},
+  recommendNewRanking: {},
+  recommendOriginalRanking: {}
 })
 
 function reducer(state = initState, action) {
@@ -17,7 +19,13 @@ function reducer(state = initState, action) {
     case actionTypes.CHANGEHOTRECOMMEND:
       return state.set("hotRecommend", action.hotRecommend);
     case actionTypes.CHANGENEWALBUM:
-      return state.set("newAlbum", action.newAlbum)
+      return state.set("newAlbum", action.newAlbum);
+    case actionTypes.CHANGEUPRANKING:
+      return state.set("recommendUpRanking", action.recommendUpRanking);
+    case actionTypes.CHANGENEWRANKING:
+      return state.set("recommendNewRanking", action.recommendNewRanking);
+    case actionTypes.CHANGEORIGINALRANKING:
+      return state.set("recommendOriginalRanking", action.recommendOriginalRanking);
     default:
       return state
   }

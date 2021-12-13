@@ -1,6 +1,5 @@
 // 用redux中的hooks替代
 import React, { memo } from 'react'
-import ThemeRecommendTitle from '@/components/theme-recommend-title'
 import {
   Content,
   RecommendLeft,
@@ -10,6 +9,7 @@ import {
 import Banners from './children/Banners'
 import HotRecommend from './children/HotRecommend'
 import UpdateAlbum from './children/UpdateAlbum'
+import RecommendRanking from './children/RecommendRanking'
 
 function Recommend() {
   return (
@@ -19,8 +19,7 @@ function Recommend() {
         <RecommendLeft>
           <HotRecommend />
           <UpdateAlbum />
-
-          {/* <ThemeRecommendTitle title={"榜单"} /> */}
+          <RecommendRanking />
         </RecommendLeft>
         <RecommendRight />
       </Content>
