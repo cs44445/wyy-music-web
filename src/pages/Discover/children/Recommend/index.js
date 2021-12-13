@@ -9,6 +9,7 @@ import {
 
 import Banners from './children/Banners'
 import HotRecommend from './children/HotRecommend'
+import UpdateAlbum from './children/UpdateAlbum'
 
 function Recommend() {
   return (
@@ -17,8 +18,9 @@ function Recommend() {
       <Content>
         <RecommendLeft>
           <HotRecommend />
-          <ThemeRecommendTitle title={"新碟上架"} />
-          <ThemeRecommendTitle title={"榜单"} />
+          <UpdateAlbum />
+
+          {/* <ThemeRecommendTitle title={"榜单"} /> */}
         </RecommendLeft>
         <RecommendRight />
       </Content>
